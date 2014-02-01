@@ -8,4 +8,6 @@ module.exports = function(grunt){
 		grunt.log.writeln('A new line');
 	});
 
+	grunt.registerTask('default', ['log']);
+
 };
