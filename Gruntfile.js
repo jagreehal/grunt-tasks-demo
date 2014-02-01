@@ -9,10 +9,9 @@ module.exports = function(grunt){
 	});
 
 	grunt.registerTask('fail', function(){
-		grunt.fail.warn('A fail warning');
+		grunt.fail.fatal('A fail fatal');
 		grunt.log.oklns('The end');
 	});
-
 
 	grunt.registerTask('default', ['log', 'fail']);
 };
