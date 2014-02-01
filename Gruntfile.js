@@ -22,5 +22,5 @@ module.exports = function(grunt){
 		grunt.log.oklns('Finsihed!');
 	});
 
-	grunt.registerTask('default', ['log', 'long', 'done']);
+	grunt.registerTask('default', ['log', 'long','long', 'done']);
 };
