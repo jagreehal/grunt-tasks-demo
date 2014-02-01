@@ -1,0 +1,24 @@
+{
+  "name": "grunt-tasks-demo",
+  "version": "0.0.0",
+  "description": "grunt-tasks-demo ================",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jagreehal/grunt-tasks-demo"
+  },
+  "author": "",
+  "license": "BSD",
+  "gitHead": "0f736170573ab8e2b4ce3c46e70c5823625a8b4f",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/jagreehal/grunt-tasks-demo/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  }
+}
