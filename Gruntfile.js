@@ -1,16 +1,18 @@
 /*global module:false*/
 
 module.exports = function(grunt){
-	"use strict";
+	'use strict';
 
 	grunt.registerTask('log', function(){
 		grunt.log.subhead('A bold head');
 		grunt.log.writeln('A new line');
 	});
 
-	grunt.registerTask('error', function(){
-		grunt.log.errorlns('Prints error message');
+	grunt.registerTask('fail', function(){
+		grunt.fail.warn('A fail warning');
+		grunt.log.oklns('The end');
 	});
 
-	grunt.registerTask('default', ['log', 'error']);
+
+	grunt.registerTask('default', ['log', 'fail']);
 };
