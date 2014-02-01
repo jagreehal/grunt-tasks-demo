@@ -8,10 +8,13 @@ module.exports = function(grunt){
 		grunt.log.writeln('A new line');
 	});
 
-	grunt.registerTask('fail', function(){
-		grunt.fail.fatal('A fail fatal');
-		grunt.log.oklns('The end');
+	grunt.registerTask('long', function(){
+		var start = Date.now();
+		while(Date.now()-start<5000){
+		}
+		grunt.log.oklns('Finished!');
 	});
 
-	grunt.registerTask('default', ['log', 'fail']);
+
+	grunt.registerTask('default', ['log', 'long']);
 };
