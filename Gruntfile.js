@@ -7,6 +7,23 @@ module.exports = function(grunt){
 	// npm install --save-dev time-grunt
 	require('time-grunt')(grunt);
 
+	grunt.initConfig({
+		concurrent: {
+			options: {
+				logConcurrentOutput: true
+			},
+			two: {
+				tasks: ['long', 'long']
+			},
+			three: {
+				tasks: ['long', 'long', 'long']
+			}
+		}
+	});
+
+	// npm install --save-dev grunt-concurrent
+	grunt.loadNpmTasks('grunt-concurrent');
+
 	grunt.registerTask('log', function(){
 		grunt.log.subhead('A bold head');
 		grunt.log.writeln('A new line');
@@ -22,5 +39,9 @@ module.exports = function(grunt){
 		grunt.log.oklns('Finsihed!');
 	});
 
-	grunt.registerTask('default', ['log', 'long','long', 'done']);
+	grunt.registerTask('default', ['log', 'long', 'long', 'done']);
+
+	grunt.registerTask('two', ['log', 'concurrent:two', 'done']);
+
+	grunt.registerTask('three', ['log', 'concurrent:three', 'done']);
 };
